@@ -34,3 +34,6 @@ while True:
     sets = int(input("Enter number of sets: "))
     reps = int(input("Enter number of reps per set: "))
     exercise_records.append(record_exercise(exercise_type, sets, reps))
+
+print("\nRecording completed.\n")
+track_progress(exercise_records)
