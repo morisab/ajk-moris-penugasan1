@@ -15,3 +15,9 @@ def track_progress(exercise_records):
             progress[record["type"]]["reps"] += record["reps"]
         total_sets += record["sets"]
         total_reps += record["reps"]
+
+    print("\nYour Progress:")
+    for exercise, data in progress.items():
+        print(f"- {exercise}: {data['sets']} sets, {data['reps']} reps")
+    print(f"\nTotal: {total_sets} sets, {total_reps} reps")
+    return progress
