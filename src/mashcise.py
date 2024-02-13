@@ -1,6 +1,7 @@
 #mashcise
 
-def record_exercise():
-    return 0
-def track_progress():
-    return 0
+def record_exercise(exercise_type, reps):
+    return {"type": exercise_type, "reps": reps}
+
+def track_progress(exercise_records):
+    return progress
