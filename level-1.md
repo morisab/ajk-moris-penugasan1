@@ -1,9 +1,11 @@
-# Premis
+# ajk-moris-penugasan1
 
 Mash Burnedead hidup di dunia di mana sihir adalah segalanya. Meskipun dia tidak memiliki kemampuan sihir, dia memiliki kekuatan fisik yang luar biasa. Misalkan Mash ingin membuat program Python untuk melacak latihan fisiknya dan menggunakan Git untuk mengelola versi programnya.
 
 Pertama, Mash membuat repositori Git baru dan membuat branch. 
 Selanjutnya dia menambahkan file `mashcise.py` ke branch `master`.
+
+![image1](media/Screenshot%20(392).png)
 
 Rupanya mash salah mengupload file python, akhirnya mash lebih memilih mengupload secara langsung filenya yang benar pada GitHub. 
 ```python
@@ -15,11 +17,15 @@ def track_progress():
     return 0
 ```
 
+![image2](media/Screenshot%20(395).png)
+
 Setelah Mash menambahkan file baru di branch `master`, dia menyadari bahwa dia ingin mengambil perubahan terbaru dari branch `master` di GitHub. Dia melakukan ini dengan perintah git pull.
 
 ```bash
 git pull
 ```
+
+![image3](media/Screenshot%20(396).png)
 
 Kemudian, dia membuat branch `development` dan menambahkan baris kode baru pada mashcise.py.
 
@@ -44,11 +50,15 @@ git commit
 git push origin development
 ```
 
+![image4](media/Screenshot%20(397).png)
+
 Selanjutnya yang dia lakukan adalah membuat branch `featureA`.
 
 ```bash
 git checkout -b featureA
 ```
+
+![image5](media/Screenshot%20(398).png)
 
 Pada branch `featureA`, Mash menulis fungsi untuk mencatat latihan fisiknya.
 
@@ -57,6 +67,9 @@ def record_exercise(exercise_type, reps):
     print(f"Recording exercise: {exercise_type}, {reps} reps")
     return {"type": exercise_type, "reps": reps}
 ```
+
+
+![image6](media/Screenshot%20(399).png)
 
 Setelah itu, dia melakukan commit dan push ke branch `featureA`.
 
@@ -75,6 +88,8 @@ def record_exercise(exercise_type, sets, reps):
     return {"type": exercise_type, "sets": sets, "reps": reps}
 ```
 
+![image7](media/Screenshot%20(401).png)
+
 Karena memakan kue sus isi krim, akhirnya Mash tau apa yang harus dia tulis pada fungsi untuk melacak perkembangan latihan fisiknya sehingga dia membuat branch `featureB`. Karena Mash takut ide ini segera hilang, maka kemudian dia menyimpan perubahan sebelumnya kedalam stash
 
 Mula-mula dia melihat perubahan yang belum dicommit.
@@ -82,11 +97,15 @@ Mula-mula dia melihat perubahan yang belum dicommit.
 git diff
 ```
 
+![image8](media/Screenshot%20(402).png)
+
 Setelah memastikan memang ada perubahan, kemudian baru dia menggunakan stash
 
 ```bash
 git stash save "wip in record_exercise"
 ```
+
+![image9](media/Screenshot%20(403).png)
 
 Kemudian dia membuat branch `featureB`
 
@@ -94,6 +113,8 @@ Kemudian dia membuat branch `featureB`
 git checkout development
 git checkout -b featureB
 ```
+
+![image10](media/Screenshot%20(404).png)
 
 Pada branch `featureB`, Mash menulis fungsi untuk melacak perkembangan latihan fisiknya, namun karena terlalu lama dia sudah lupa dengan idenya tadi sehingga Mash hanya menuliskan sebagai berikut.
 
@@ -104,6 +125,9 @@ def track_progress(exercise_records):
 ```
 
 Dia melakukan commit dan push ke branch `featureB`.
+
+![image11](media/Screenshot%20(405).png)
+
 
 Setelah itu, dia beralih ke branch `featureA` dan mengerjakan kembali progress nya yang sebelumnya disimpan di stash.
 
