@@ -79,14 +79,15 @@ def record_exercise(exercise_type, reps):
 
 Setelah itu, dia melakukan commit dan push ke branch `featureA`.
 
-Kemudian mash bingung terhadap fungsi track_progress(), akhirnya dia memutuskan untuk menghapusnya dulu pada branch `development`
+Kemudian mash bingung terhadap fungsi track_progress(), akhirnya dia memutuskan untuk menghapusnya dulu pada branch `development`.
+
 ```bash
 git checkout development
 ```
 
 Lalu commit dan push ke branch `development`.
 
-Selanjutnya dia baru sadar lupa menghitung berapa sets yang dilakukannya untuk setiap olahraga, sehingga mash harus memperbaiki kodenya. Mash kembali ke branch `featureA` kemudian memperbaiki kodenya
+Selanjutnya dia baru sadar lupa menghitung berapa sets yang dilakukannya untuk setiap olahraga, sehingga mash harus memperbaiki kodenya. Mash kembali ke branch `featureA` kemudian memperbaiki kodenya.
 
 ```python
 def record_exercise(exercise_type, sets, reps):
@@ -103,6 +104,7 @@ Setelah memakan kue sus isi krim, akhirnya Mash tau apa yang harus dia tulis pad
 Karena Mash takut ide ini segera hilang, maka kemudian dia menyimpan perubahan sebelumnya kedalam stash.
 
 Mula-mula dia melihat perubahan yang belum dicommit.
+
 ```bash
 git diff
 ```
@@ -117,7 +119,7 @@ git stash save "wip record_exercise"
 
 ![image9](media/Screenshot%20(403).png)
 
-Kemudian dia membuat branch `featureB`
+Kemudian dia membuat branch `featureB`.
 
 ```bash
 git checkout development
@@ -138,7 +140,6 @@ Dia melakukan commit dan push ke branch `featureB`.
 
 ![image11](media/Screenshot%20(405).png)
 
-
 Setelah itu, dia beralih ke branch `featureA` dan mengerjakan kembali progress nya yang sebelumnya disimpan di stash.
 
 ```bash
@@ -149,11 +150,9 @@ git stash pop
 
 ![image12](media/Screenshot%20(407).png)
 
-
 Kemudian Mash melakukan commit dan push ke branch `featureA`.
 
 ![image13](media/Screenshot%20(408).png)
-
 
 Mash beralih ke branch `development` dan melakukan merge dari branch `featureA`.
 
@@ -169,6 +168,7 @@ Karena terdapat konflik, maka mash harus menyelesaikan konflik ini terlebih dahu
 ![image15](media/Screenshot%20(410).png)
 
 Setelah tidur siang, mash memperoleh ide untuk logika fungsi untuk melacak latihan fisiknya. Dia langsung mengeksekusi idenya ini.
+
 ```bash
 git checkout featureB
 ```
@@ -269,6 +269,7 @@ Karena konfliknya terlalu banyak, maka pada VS Code pilih "Resolve in Merge Edit
 ![image22](media/Screenshot%20(418).png)
 
 Mash lupa untuk memanggil fungsi track_progress(), sehingga dia harus mengedit kode nya terlebih dahulu kemudian melakukan commit dan push lagi.
+
 ```python
 print("\nRecording completed.\n")
 track_progress(exercise_records)
@@ -276,7 +277,7 @@ track_progress(exercise_records)
 
 ![image23](media/Screenshot%20(419).png)
 
-Terakhir Mash melakukan merge dari branch `development` dan `master`
+Terakhir Mash melakukan merge dari branch `development` dan `master`.
 
 ![image24](media/Screenshot%20(420).png)
 
