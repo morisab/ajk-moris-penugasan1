@@ -1,6 +1,12 @@
-# ajk-moris-penugasan1
+# Level 1
 
-Mash Burnedead hidup di dunia di mana sihir adalah segalanya. Meskipun dia tidak memiliki kemampuan sihir, dia memiliki kekuatan fisik yang luar biasa. Misalkan Mash ingin membuat program Python untuk melacak latihan fisiknya dan menggunakan Git untuk mengelola versi programnya.
+![mash1](media/xkgbHdS.jpg)
+
+Mash Burnedead hidup di dunia di mana sihir adalah segalanya. Meskipun dia tidak memiliki kemampuan sihir, dia memiliki kekuatan fisik yang luar biasa. 
+
+![mash2](media/18NCOX6.jpg)
+
+Karena Mash payah dalam berhitung, jadi dia membuat program Python untuk melacak latihan fisiknya dan menggunakan Git untuk mengelola versi programnya.
 
 Pertama, Mash membuat repositori Git baru dan membuat branch. 
 Selanjutnya dia menambahkan file `mashcise.py` ke branch `master`.
@@ -90,7 +96,11 @@ def record_exercise(exercise_type, sets, reps):
 
 ![image7](media/Screenshot%20(401).png)
 
-Karena memakan kue sus isi krim, akhirnya Mash tau apa yang harus dia tulis pada fungsi untuk melacak perkembangan latihan fisiknya sehingga dia membuat branch `featureB`. Karena Mash takut ide ini segera hilang, maka kemudian dia menyimpan perubahan sebelumnya kedalam stash
+Setelah memakan kue sus isi krim, akhirnya Mash tau apa yang harus dia tulis pada fungsi untuk melacak perkembangan latihan fisiknya sehingga dia membuat branch `featureB`. 
+
+![mash3](media/Stzze99.jpg)
+
+Karena Mash takut ide ini segera hilang, maka kemudian dia menyimpan perubahan sebelumnya kedalam stash.
 
 Mula-mula dia melihat perubahan yang belum dicommit.
 ```bash
@@ -99,10 +109,10 @@ git diff
 
 ![image8](media/Screenshot%20(402).png)
 
-Setelah memastikan memang ada perubahan, kemudian baru dia menggunakan stash
+Setelah memastikan memang ada perubahan, kemudian baru dia menggunakan stash.
 
 ```bash
-git stash save "wip in record_exercise"
+git stash save "wip record_exercise"
 ```
 
 ![image9](media/Screenshot%20(403).png)
@@ -137,7 +147,13 @@ git stash list
 git stash pop
 ```
 
+![image12](media/Screenshot%20(407).png)
+
+
 Kemudian Mash melakukan commit dan push ke branch `featureA`.
+
+![image13](media/Screenshot%20(408).png)
+
 
 Mash beralih ke branch `development` dan melakukan merge dari branch `featureA`.
 
@@ -145,7 +161,12 @@ Mash beralih ke branch `development` dan melakukan merge dari branch `featureA`.
 git checkout development
 git merge featureA --no-ff
 ```
-Karena terdapat konflik, maka mash harus menyelesaikan konflik ini terlebih dahulu. Karena Mash ingin menerima **perubahan** dari `featureA` maka pada VS Code klik accept incoming change 
+
+![image14](media/Screenshot%20(409).png)
+
+Karena terdapat konflik, maka mash harus menyelesaikan konflik ini terlebih dahulu. Karena Mash ingin menerima **perubahan** dari `featureA` maka pada VS Code klik accept incoming change .
+
+![image15](media/Screenshot%20(410).png)
 
 Setelah tidur siang, mash memperoleh ide untuk logika fungsi untuk melacak latihan fisiknya. Dia langsung mengeksekusi idenya ini.
 ```bash
@@ -167,7 +188,10 @@ def track_progress(exercise_records):
         total_reps += record["reps"]
 ```
 
-Kemudian dia melakukan commit dan push ke branch `featureB`
+Kemudian dia melakukan commit dan push ke branch `featureB`.
+
+![image16](media/Screenshot%20(412).png)
+
 Mash juga kepikiran untuk menambahkan beberapa kode lain
 
 ```python
@@ -179,11 +203,15 @@ if total_reps == 0:
         return progress
 ```
 
+![image17](media/Screenshot%20(413).png)
+
 Tapi karena Mash merasa kodenya ini ditertawakan oleh temannya, dia merasa malu kemudian. Tapi sebelumnya mash sudah terlanjut melakukan commit, akhrinya dia melakukan git reset untuk membatalkan commit terakhirnya.
 
 ```
 git reset --hard HEAD~1
 ```
+
+![image18](media/Screenshot%20(414).png)
 
 Kemudian beralih ke branch `development`. Mash menambahkan beberapa baris kode agar aplikasinya terlihat lebih interaktif.
 ```python
@@ -200,7 +228,13 @@ while True:
     exercise_records.append(record_exercise(exercise_type, sets, reps))
 ```
 
+![image19](media/Screenshot%20(415).png)
+
 Setelah mendapatkan ide untuk logika fungsi pelacakan latihan fisiknya, Mash memutuskan untuk menambahkan beberapa baris kode lagi di branch `featureB`:
+
+```bash
+git checkout featureB
+```
 
 ```python
 print("\nYour Progress:")
@@ -215,9 +249,11 @@ Dia melakukan commit dan push perubahan ini ke branch `featureB`.
 
 ```bash
 git add featureB.py
-git commit -m "add function to display progress"
+git commit -m "progress tracking and display"
 git push origin featureB
 ```
+
+![image20](media/Screenshot%20(416).png)
 
 Setelah itu, Mash beralih ke branch `development` dan melakukan merge dari branch `featureB`.
 
@@ -226,7 +262,11 @@ git checkout development
 git merge featureB --no-ff
 ```
 
+![image21](media/Screenshot%20(417).png)
+
 Karena konfliknya terlalu banyak, maka pada VS Code pilih "Resolve in Merge Editor". Sesuaikan sesuai dengan bagaimana seharusnya kemudian commit dan push ke branch development.
+
+![image22](media/Screenshot%20(418).png)
 
 Mash lupa untuk memanggil fungsi track_progress(), sehingga dia harus mengedit kode nya terlebih dahulu kemudian melakukan commit dan push lagi.
 ```python
@@ -234,6 +274,14 @@ print("\nRecording completed.\n")
 track_progress(exercise_records)
 ```
 
+![image23](media/Screenshot%20(419).png)
+
 Terakhir Mash melakukan merge dari branch `development` dan `master`
 
+![image24](media/Screenshot%20(420).png)
+
 Akhirnya, Mash berhasil membuat program Python untuk melacak latihan fisiknya dengan bantuan Git. Mash berharap bahwa dengan adanya fungsi pelacakan ini, dia akan dapat melihat progres latihannya dengan lebih baik.
+
+# Git Graph
+
+![image25](media/Screenshot%20(421).png)
