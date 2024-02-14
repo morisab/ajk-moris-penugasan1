@@ -164,7 +164,7 @@ git merge featureA --no-ff
 
 ![image14](media/Screenshot%20(409).png)
 
-Karena terdapat konflik, maka mash harus menyelesaikan konflik ini terlebih dahulu. Karena Mash ingin menerima **perubahan** dari `featureA` maka pada VS Code klik accept incoming change .
+Karena terdapat konflik, maka mash harus menyelesaikan konflik ini terlebih dahulu. Karena Mash ingin menerima perubahan dari `featureA` maka pada VS Code klik accept incoming change.
 
 ![image15](media/Screenshot%20(410).png)
 
@@ -192,7 +192,7 @@ Kemudian dia melakukan commit dan push ke branch `featureB`.
 
 ![image16](media/Screenshot%20(412).png)
 
-Mash juga kepikiran untuk menambahkan beberapa kode lain
+Mash juga kepikiran untuk menambahkan beberapa kode lain.
 
 ```python
 if total_reps == 0:
@@ -207,7 +207,7 @@ if total_reps == 0:
 
 Tapi karena Mash merasa kodenya ini ditertawakan oleh temannya, dia merasa malu kemudian. Tapi sebelumnya mash sudah terlanjut melakukan commit, akhrinya dia melakukan git reset untuk membatalkan commit terakhirnya.
 
-```
+```bash
 git reset --hard HEAD~1
 ```
 
@@ -230,7 +230,7 @@ while True:
 
 ![image19](media/Screenshot%20(415).png)
 
-Setelah mendapatkan ide untuk logika fungsi pelacakan latihan fisiknya, Mash memutuskan untuk menambahkan beberapa baris kode lagi di branch `featureB`:
+Setelah mendapatkan ide untuk logika fungsi pelacakan latihan fisiknya, Mash memutuskan untuk menambahkan beberapa baris kode lagi di branch `featureB`.
 
 ```bash
 git checkout featureB
@@ -282,6 +282,85 @@ Terakhir Mash melakukan merge dari branch `development` dan `master`
 
 Akhirnya, Mash berhasil membuat program Python untuk melacak latihan fisiknya dengan bantuan Git. Mash berharap bahwa dengan adanya fungsi pelacakan ini, dia akan dapat melihat progres latihannya dengan lebih baik.
 
+# Soal
+1. Soal 1
+```
+Buat sebuah repository di GitHub. Nama repository dalam format ajk-[nama panggilan]-penugasan1. Repository ini juga sebagai tempat menaruh laporan pengerjaan untuk level selanjutnya.
+Contoh: ajk-nur-penugasan1
+Struktur: 
+/src			(Berisi kode pengerjaan level 1 kalian)
+README.md		(Readme utama)
+level-1.md		(Laporan level 1)
+level-2.md		(Laporan level 2)
+level-3.md		(Laporan level 3)
+level-4.md		(Laporan level 4)
+```
+
+Untuk mengejakan soal ini cukup dengan membuat repository baru pada GitHub kemudian menambahkan file serta folder sesuai dengan instruksi pada soal.
+
+![soal1](media/Screenshot%20(424).png)
+
+2. Soal 2
+```
+Implementasikan penggunaan branching yang terdiri dari master, development, featureA, dan featureB. Codebase dibebaskan.
+```
+
+Pada soal ini diminta untuk mengimplementasikan branching. Langkah yang saya lakukan adalah menambahkan branch master, development, featureA, dan featureB sesuai dengan alur skenario pada narasi diatas.
+
+![soal2](media/Screenshot%20(425).png)
+
+3. Soal 3
+```
+Implementasikan intruksi git untuk push, pull, stash, reset, diff, dan merge. Adanya tambahan intruksi git selain yang disebutkan akan lebih baik.
+```
+- push
+![image4](media/Screenshot%20(397).png)
+Salah satu contoh ketika saya melakukan git push untuk men-transfer perubahan file ke repository GitHub.
+
+- pull
+![image3](media/Screenshot%20(396).png)
+Pada kasus ini, git pull saya gunakan untuk mengambil perubahan terbaru dari repository GitHub.
+
+- stash
+![image9](media/Screenshot%20(403).png)
+Stash pada kasus ini digunakan ketika saya ingin berpindah ke branch lain namun masih ada perubahan yang belum di-commit pada brach saat ini. Sehingga saya menggunakan git stash save untuk menyimpan perubahan tersebut sehingga bisa berpindah branch. 
+
+- reset
+![image18](media/Screenshot%20(414).png)
+Ketika sudah terlanjut melakukan commit, namun kemudian merasa perubahannya kurang cocok, maka disitu dapat mengimplementasikan reset untuk kembali ke commit sebelumnya.
+
+- diff
+![image8](media/Screenshot%20(402).png)
+Disini saya menggunakan git diff untuk memastikan adanya perubahan pada branch saat ini sebelum melakukan git stash. 
+
+- merge
+![image24](media/Screenshot%20(420).png)
+Saya menggunakan merge disini saat ingin menggabungkan branch development ke branch master.
+
+4. Soal 4
+```
+Implementasikan sebuah penanganan conflict di branch development ketika setelah merge dari branch featureA lalu merge dari branch featureB.
+Catatan: conflict bisa terjadi jika kedua branch mengerjakan di file dan line code yang sama. Buatlah skenario sendiri.
+```
+Ketika ingin melakukan merge dari branch featureB ke branch development, disini menghadapi conflict karena kedua branch membuat perubahan pada file dan line code yang sama. Sehingga perlu fix conflict terlebih dahulu. 
+
+![image21](media/Screenshot%20(417).png)
+
+Pada kasus ini saya memutuskan untuk menyelesaikan conflict nya pada Merge Editor di VS Code untuk mempermudah pengeditan dan menyesuaikannya sesuai dengan kebutuhan. Ketika sudah selesai, klik Complete Merge pada VS Code kemudian commit dan push.
+
+![image22](media/Screenshot%20(418).png)
+
+5. Soal 5
+```
+Gunakan merge no fast forward.
+```
+![image14](media/Screenshot%20(409).png)
+
+Merge no fast forward digunakan pada merge antara 2 branch ini. 
+
 # Git Graph
 
 ![image25](media/Screenshot%20(421).png)
+
+# Kendala atau Kesulitan
+- Kendala utama adalah saat membuat skenario untuk mengimplementasikan instruksi Git. Dan juga karena kurang familiar dengan Git dan GitHub, jadi selama pengerjaan sering menghadapi error-error sehingga perlu waktu lebih untuk mencari solusinya.
