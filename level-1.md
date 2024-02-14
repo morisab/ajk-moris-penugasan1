@@ -1,9 +1,8 @@
-# ajk-moris-penugasan1
+# Premis
 
 Mash Burnedead hidup di dunia di mana sihir adalah segalanya. Meskipun dia tidak memiliki kemampuan sihir, dia memiliki kekuatan fisik yang luar biasa. Misalkan Mash ingin membuat program Python untuk melacak latihan fisiknya dan menggunakan Git untuk mengelola versi programnya.
 
 Pertama, Mash membuat repositori Git baru dan membuat branch. 
-
 Selanjutnya dia menambahkan file `mashcise.py` ke branch `master`.
 
 Rupanya mash salah mengupload file python, akhirnya mash lebih memilih mengupload secara langsung filenya yang benar pada GitHub. 
@@ -38,7 +37,12 @@ def track_progress(exercise_records):
     return progress
 ```
 
-Kemudian dia melakukan commit dan push pada branch `development`
+Kemudian dia melakukan commit dan push pada branch `development`.
+```bash
+git add .
+git commit
+git push origin development
+```
 
 Selanjutnya yang dia lakukan adalah membuat branch `featureA`.
 
